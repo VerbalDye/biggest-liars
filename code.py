@@ -1,10 +1,11 @@
 import math
+import matplotlib.pyplot as plt
 
 top = 1373653
 aList = [2, 3]
 results = []
 
-for n in range(5,101,2):
+for n in range(5,102,2):
     m = 0
     d = n - 1
     i = True
@@ -34,7 +35,28 @@ for number in results:
     for y in number[2]:
         if y == 1 or y == number[0]-1:
             yTrue = True
-    if yTrue and xTrue:
+    if not yTrue or not xTrue:
         print(number[0])
 
 # print(results)
+
+
+ 
+# x axis values
+x = [1,2,3]
+# corresponding y axis values
+y = [2,4,1]
+ 
+# plotting the points
+plt.plot(x, y)
+ 
+# naming the x axis
+plt.xlabel('x - axis')
+# naming the y axis
+plt.ylabel('y - axis')
+ 
+# giving a title to my graph
+plt.title('My first graph!')
+ 
+# function to show the plot
+plt.show()
